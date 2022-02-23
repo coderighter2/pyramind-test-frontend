@@ -135,7 +135,7 @@ const Calculation = () => {
         </div>
       </form>
       {amount === 0 && <p>No Delivered Stones</p>}
-      {amount > 0 && <h4 color="primary">You can deliver maxium {amount} stones now.</h4>}
+      {amount > 0 && <h4 color="primary">You can deliver a maximum of {amount} stones now.</h4>}
     </>
   );
 };
