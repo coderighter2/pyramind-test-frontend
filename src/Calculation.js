@@ -56,13 +56,14 @@ const Calculation = () => {
   };
   const setAsDefault = e => {
     e.preventDefault();
+    setAmount(null)
     setTotalTime(DefaultValues.totalTime)
     setloadTime(DefaultValues.loadTime)
     setUnloadTime(DefaultValues.unloadTime)
     setBoatsCount(DefaultValues.boatsCount)
     setLocationTime(DefaultValues.locationTime)
   }
-  
+
   return (
     <>
       <form className={classes.root} onSubmit={handleSubmit}>
@@ -74,7 +75,7 @@ const Calculation = () => {
           min={1}
           max={100}
           required
-          onChange={e => setTotalTime(e.target.value)}
+          onChange={e => {setTotalTime(e.target.value); setAmount(null)}}
         />
 
         <TextField
@@ -85,7 +86,7 @@ const Calculation = () => {
           min={1}
           max={100}
           required
-          onChange={e => setloadTime(e.target.value)}
+          onChange={e => {setloadTime(e.target.value); setAmount(null)}}
         />
 
         <TextField
@@ -96,7 +97,7 @@ const Calculation = () => {
           min={1}
           max={100}
           required
-          onChange={e => setUnloadTime(e.target.value)}
+          onChange={e => {setUnloadTime(e.target.value); setAmount(null)}}
         />
 
         <TextField
@@ -107,7 +108,7 @@ const Calculation = () => {
           min={1}
           max={100}
           required
-          onChange={e => setBoatsCount(e.target.value)}
+          onChange={e => {setBoatsCount(e.target.value); setAmount(null)}}
         />
 
         <TextField
@@ -118,7 +119,7 @@ const Calculation = () => {
           min={1}
           max={100}
           required
-          onChange={e => setLocationTime(e.target.value)}
+          onChange={e => {setLocationTime(e.target.value); setAmount(null)}}
         />
 
         <div>
